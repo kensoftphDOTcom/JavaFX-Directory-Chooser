@@ -30,7 +30,7 @@ public class Main extends Application {
         button.setOnAction(actionEvent -> {
             DirectoryChooser chooser = new DirectoryChooser();
             chooser.setTitle("Select Directory");
-            chooser.setInitialDirectory(new File("c:\\"));
+            chooser.setInitialDirectory(new File(System.getProperty("user.home")+"/Desktop"));
             File directory = chooser.showDialog(stage);
             if(directory != null){
                 label.setText(directory.toString());
